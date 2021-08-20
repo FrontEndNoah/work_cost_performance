@@ -103,7 +103,7 @@
   <label class="result">最终结果：</label>
   <div class="flex-1">
     {{
-          ((dailyWage *
+          (((dailyWage *
             workEnvironment *
             oppositeSixEnvironment *
             colleagueEnvironment *
@@ -112,7 +112,7 @@
               (workingHours + commuteHours - 0.5 * loafHours) *
               education *
               qualificationsEnvironment)) *
-            load830
+            load830)  | number : '0.2'
         }}
   </div>
 </div>
