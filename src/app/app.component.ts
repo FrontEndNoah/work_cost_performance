@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
   /** 平均日薪 6 */
@@ -30,4 +30,16 @@ export class AppComponent {
   cityEnvironment = 1;
   // ((D6*D11*D12*D13)/(35*(D7+D8-0.5*D9)*D10*D14))*D15
   // ((D6*D11*D12*D13/D16)/(35*(D7+D8-0.5*D9)*D10*D14))*D15
+
+  ngOnInit() {
+    console.log(
+      '%c ',
+      `
+        padding: 100px;
+        background-image:url(https://s3.bmp.ovh/imgs/2022/07/01/d3d1fe3be4d2eb48.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      `
+    );
+  }
 }
