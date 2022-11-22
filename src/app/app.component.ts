@@ -36,6 +36,7 @@ export class AppComponent {
       '%c ',
       `
         padding: 200px;
+        background-image:url(https://super-mumoo.github.io/work_cost_performance/assets/test.png);
         background-size: contain;
         background-repeat: no-repeat;
       `
