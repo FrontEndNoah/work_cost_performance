@@ -35,8 +35,7 @@ export class AppComponent {
     console.log(
       '%c ',
       `
-        padding: 100px;
-        background-image:url(https://s3.bmp.ovh/imgs/2022/07/01/d3d1fe3be4d2eb48.jpeg);
+        padding: 200px;
         background-size: contain;
         background-repeat: no-repeat;
       `
