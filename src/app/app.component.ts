@@ -41,15 +41,10 @@ export class AppComponent {
         c.height = img.height;
         ctx.drawImage(img, 0, 0);
         const dataUri = c.toDataURL('image/png');
-        const style = `
-        padding: 200px;
-        background-image:url(${dataUri};
-        background-size: contain;
-        background-repeat: no-repeat;`;
+        const style = `padding: 200px;background-size: contain;background-repeat: no-repeat;background-image: url(${dataUri})`;
         console.log('%c ', style);
       }
     };
-    img.setAttribute("crossOrigin",'Anonymous')
     img.src = 'https://super-mumoo.github.io/work_cost_performance/assets/test.png';
   }
 }
