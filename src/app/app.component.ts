@@ -32,14 +32,24 @@ export class AppComponent {
   // ((D6*D11*D12*D13/D16)/(35*(D7+D8-0.5*D9)*D10*D14))*D15
 
   ngOnInit() {
-    console.log(
-      '%c ',
-      `
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement('canvas');
+      const ctx = c.getContext('2d');
+      if (ctx) {
+        c.width = img.width;
+        c.height = img.height;
+        ctx.drawImage(img, 0, 0);
+        const dataUri = c.toDataURL('image/png');
+        const style = `
         padding: 200px;
-        background-image:url(https://super-mumoo.github.io/work_cost_performance/assets/test.png);
+        background-image:url(${dataUri};
         background-size: contain;
-        background-repeat: no-repeat;
-      `
-    );
+        background-repeat: no-repeat;`;
+        console.log('%c ', style);
+      }
+    };
+    img.setAttribute("crossOrigin",'Anonymous')
+    img.src = 'https://super-mumoo.github.io/work_cost_performance/assets/test.png';
   }
 }
